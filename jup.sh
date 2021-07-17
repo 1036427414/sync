@@ -449,9 +449,9 @@ update_scripts () {
 
     ## 更新或克隆scripts
     if [ -d $dir_scripts/.git ]; then
-        git_pull_scripts $dir_scripts
+        git_pull_scripts $dir_scripts --allow-unrelated-histories
     else
-        git_clone_scripts $url_scripts $dir_scripts "master" --allow-unrelated-histories
+        git_clone_scripts $url_scripts $dir_scripts "master"
     fi
 
     if [[ $exit_status -eq 0 ]]; then
