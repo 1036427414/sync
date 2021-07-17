@@ -1,1 +1,7 @@
-仓库脚本已内置本人远程助力地址和助力码，请不要使用！！！请不要使用！！！请不要使用！！！
+备份
+
+圈叉订阅
+https://raw.githubusercontent.com/panghu999/jd_scripts/master/QuantumultX/lxk0301_gallery.json
+
+青龙拉取
+ql repo https://ghproxy.com/https://github.com/panghu999/jd_scripts.git "jd_|jx_|getJDCookie" "activity|backUp" "^jd[^_]|USER"
