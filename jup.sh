@@ -3,7 +3,7 @@
 ## 文件路径、脚本网址
 dir_shell=$(dirname $(readlink -f "$0"))
 dir_root=$dir_shell
-url_scripts=https://github.com/1036427414/sync.git
+url_scripts=https://github.com/Aaron-lv/sync.git
 send_mark=$dir_shell/send_mark
 
 ## 导入通用变量与函数
@@ -75,7 +75,7 @@ git_pull_scripts () {
     git fetch --all
     exit_status=$?
     git reset --hard
-    git pull --allow-unrelated-histories
+    git pull
     cd $dir_current
 }
 
@@ -451,7 +451,7 @@ update_scripts () {
     if [ -d $dir_scripts/.git ]; then
         git_pull_scripts $dir_scripts
     else
-        git_clone_scripts $url_scripts $dir_scripts "master"
+        git_clone_scripts $url_scripts $dir_scripts "jd_scripts"
     fi
 
     if [[ $exit_status -eq 0 ]]; then
