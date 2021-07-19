@@ -3,7 +3,7 @@
 ## 文件路径、脚本网址
 dir_shell=$(dirname $(readlink -f "$0"))
 dir_root=$dir_shell
-url_scripts=https://hub.fastgit.org/yuannian1112/jd_scripts.git
+url_scripts=https://github.com/panghu999/jd_scripts.git
 send_mark=$dir_shell/send_mark
 
 ## 导入通用变量与函数
@@ -59,7 +59,7 @@ reset_romote_url () {
 git_clone_scripts () {
     local url=$1
     local dir=$2
-    local branch=main
+    local branch=master
     [[ $branch ]] && local cmd="-b $branch "
     echo -e "开始克隆仓库 $url 到 $dir\n"
     git clone $cmd $url $dir
@@ -451,7 +451,7 @@ update_scripts () {
     if [ -d $dir_scripts/.git ]; then
         git_pull_scripts $dir_scripts
     else
-        git_clone_scripts $url_scripts $dir_scripts "main"
+        git_clone_scripts $url_scripts $dir_scripts "master"
     fi
 
     if [[ $exit_status -eq 0 ]]; then
