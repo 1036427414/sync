@@ -75,7 +75,7 @@ git_pull_scripts () {
     git fetch --all
     exit_status=$?
     git reset --hard
-    git pull
+    git pull origin master --allow-unrelated-histories
     cd $dir_current
 }
 
