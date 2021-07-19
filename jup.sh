@@ -3,7 +3,7 @@
 ## 文件路径、脚本网址
 dir_shell=$(dirname $(readlink -f "$0"))
 dir_root=$dir_shell
-url_scripts=https://github.com/1036427414/sync.git
+url_scripts=https://github.com/yuannian1112/jd_scripts.git
 send_mark=$dir_shell/send_mark
 
 ## 导入通用变量与函数
@@ -59,7 +59,7 @@ reset_romote_url () {
 git_clone_scripts () {
     local url=$1
     local dir=$2
-    local branch=$3
+    local branch=main
     [[ $branch ]] && local cmd="-b $branch "
     echo -e "开始克隆仓库 $url 到 $dir\n"
     git clone $cmd $url $dir
